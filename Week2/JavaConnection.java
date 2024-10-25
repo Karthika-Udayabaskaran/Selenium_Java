@@ -3,6 +3,8 @@ package Week2;
 public class JavaConnection extends MySqlConnection implements DatabaseConnection{
 
 	public static void main(String[] args) {
+		
+		//object creation
 		JavaConnection j = new JavaConnection();
 		j.connect();
 		j.disconnect();
