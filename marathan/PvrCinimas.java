@@ -83,7 +83,7 @@ public class PvrCinimas {
 
 		// Close Browser
 
-
+		driver.close();
 
 
 	}
