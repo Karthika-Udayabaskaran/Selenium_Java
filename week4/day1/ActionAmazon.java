@@ -75,6 +75,8 @@ public class ActionAmazon {
 		{
 			System.out.println("Failed: ");
 		}
+		
+		driver.close();
 	}
 
 }
