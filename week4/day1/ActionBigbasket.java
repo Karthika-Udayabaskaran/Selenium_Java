@@ -55,7 +55,7 @@ public class ActionBigbasket {
 		List<String> cw =new ArrayList<String>(childwindows);
 
 		driver.switchTo().window(cw.get(1));
-		System.out.println(driver.getCurrentUrl());
+		//System.out.println(driver.getCurrentUrl());
 
 		WebElement item = driver.findElement(By.xpath("//span[text()='5 kg']"));
 		driver.executeScript("arguments[0].click()", item);
