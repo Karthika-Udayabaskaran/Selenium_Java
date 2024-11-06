@@ -18,7 +18,6 @@ public class LFrames {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		driver.switchTo().frame(0);
-		
 		WebElement btn= driver.findElement(By.id("Click"));
 				btn.click();
 				System.out.println(btn.getText());

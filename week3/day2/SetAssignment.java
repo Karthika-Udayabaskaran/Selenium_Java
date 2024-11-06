@@ -17,6 +17,7 @@ public class SetAssignment {
 		for (int i = 0; i < charArray.length; i++) {
 			
 			unique.add(charArray[i]);
+			
 		}
 
 		System.out.println(unique);
