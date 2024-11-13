@@ -17,13 +17,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.reactivex.rxjava3.functions.Action;
 
 public class ActionAmazon {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		ChromeDriver driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
@@ -31,8 +32,14 @@ public class ActionAmazon {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
 		driver.get("https://www.amazon.in/");
+		Thread.sleep(5000);
+		
+		WebElement search = driver.findElement(By.xpath("//*[@id='searchDropdownBox']"));
+		search.click();
+		Select s = new Select (search);
+		s.selectByValue("Deals");
 
-		driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']")).sendKeys("oneplus 9 pro",Keys.ENTER);
+	/*	driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']")).sendKeys("oneplus 9 pro",Keys.ENTER);
 		WebElement price = driver.findElement(By.xpath("(//*[@class='a-price-whole'])[1]"));
 		System.out.println("Price of the First Product: " +price.getText());
 
@@ -76,7 +83,7 @@ public class ActionAmazon {
 			System.out.println("Failed: ");
 		}
 		
-		driver.close();
+		driver.close();*/
 	}
 
 }

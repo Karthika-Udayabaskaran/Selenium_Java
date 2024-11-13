@@ -7,19 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 
-public class DuplicateLead {
+public class DuplicateLead extends Baseclass {
 
 @Test
 	public  void tc03_DuplicateLead() throws InterruptedException {
 		
-		ChromeDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("http://leaftaps.com/opentaps/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
-		driver.findElement(By.id("password")).sendKeys("crmsfa");
-		driver.findElement(By.className("decorativeSubmit")).click();
-		driver.findElement(By.linkText("CRM/SFA")).click();
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.linkText("Find Leads")).click();
 		driver.findElement(By.xpath("//span[text()='Phone']")).click();
@@ -29,7 +21,7 @@ public class DuplicateLead {
 		driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a")).click();
 		driver.findElement(By.linkText("Duplicate Lead")).click();
 		driver.findElement(By.name("submitButton")).click();
-		driver.close();
+		
 }
 }
 

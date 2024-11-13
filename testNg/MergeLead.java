@@ -10,19 +10,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 
-public class MergeLead {
+public class MergeLead extends Baseclass {
 
 @Test
 	public  void tc05_MergeLead() throws InterruptedException {
 
-		ChromeDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("http://leaftaps.com/opentaps/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
-		driver.findElement(By.id("password")).sendKeys("crmsfa");
-		driver.findElement(By.className("decorativeSubmit")).click();
-		driver.findElement(By.linkText("CRM/SFA")).click();
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.linkText("Merge Leads")).click();
 		driver.findElement(By.xpath("//img[@alt='Lookup']")).click();
@@ -57,7 +49,6 @@ public class MergeLead {
 		} else {
 			System.out.println("Text not matched");
 		}
-		driver.close();
 
 
 	}
