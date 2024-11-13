@@ -1,13 +1,13 @@
 package runner;
 
-	
-	import io.cucumber.testng.AbstractTestNGCucumberTests;
-	import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
+@CucumberOptions(features="src/main/java/features/login.feature",
+		glue="stepdefinition",
+		publish=true,
+		monochrome=true)
 
-	@CucumberOptions(features = "src/test/java/feature/CreateAccountSalesforce.feature",
-	                 glue = "stepdefinition")
-	public class Runner extends AbstractTestNGCucumberTests {
-
+public class Runner extends AbstractTestNGCucumberTests {
 
 }
