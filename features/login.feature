@@ -3,14 +3,14 @@
 
 Feature: Login into leaftaps application 
 
-
+@class
   Scenario: TC01_Login into application using valid username and password
     Given Browser launched sucessfully
     When enter the username as  "DemoSalesManager"
     And enter the password as "crmsfa"
     And click on submit button
     Then user should be able to login sucessfully 
-    
+  @class  
    Scenario: TC02_Login into application using Invalid username and password
     Given Browser launched sucessfully
     When enter the username as  "DemoSalesManag1er"
